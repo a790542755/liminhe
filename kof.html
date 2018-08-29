@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/kof.css"/>
+	</head>
+	<body>
+	<div class="bg">
+		<img src="img/left.jpg"/ id="red">
+		<img src="img/right.jpg"/ id="blue">
+	</div>
+<script>
+		var oRed=document.getElementById('red');
+		var oBlue=document.getElementById('blue');
+		var n=0;
+		var bgp;
+		function bgp(){
+			n++;
+			if(n==5)n=1;
+			oRed.src='img/left'+n+'.jpg';
+			oBlue.src='img/right'+n+'.jpg';
+		}
+		timer=setInterval(bgp,500);
+		oRed.onmouseover=function(){
+			clearInterval(timer);
+		}
+		oRed.onmouseout=function(){
+			timer=setInterval(bgp,500);
+		}
+		
+		oBlue.onmouseover=function(){
+			clearInterval(timer);
+		}
+		oBlue.onmouseout=function(){
+			timer=setInterval(bgp,500);
+		}
+</script>
+	</body>
+</html>
