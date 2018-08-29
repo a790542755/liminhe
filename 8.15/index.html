@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<h1 id="show">俺要看看吗?</h1>
+
+<script>
+var oDiv=document.getElementById("show");
+var num=0;
+var timer=null; //创建一个空对象
+var n;
+
+function n(){
+	num++;
+	 if(num==7){
+	 	num=0;
+}
+	 	oDiv.innerHTML=num;
+}
+
+timer=setInterval(n,1000);
+
+
+oDiv.onmouseover=function(){
+	clearInterval(timer)
+}
+
+oDiv.onmouseout=function(){
+	timer=setInterval(n,1000)
+}
+</script>
+	</body>
+</html>
