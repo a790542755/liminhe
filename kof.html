@@ -21,9 +21,9 @@
 			oRed.src='img/left'+n+'.jpg';
 			oBlue.src='img/right'+n+'.jpg';
 		}
-		timer=setInterval(bgp,500);
+		timer=setInterval(bgp,500);//定时调用函数
 		oRed.onmouseover=function(){
-			clearInterval(timer);
+			clearInterval(timer);//取消serInterval()函数设定的定时执行操作
 		}
 		oRed.onmouseout=function(){
 			timer=setInterval(bgp,500);
